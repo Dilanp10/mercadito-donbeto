@@ -93,5 +93,3 @@ Crear ofertas.
 
 © 2025 Mercadito Don Beto. Todos los derechos reservados.
 
-Copiar
-Editar
