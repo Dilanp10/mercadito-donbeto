@@ -1,7 +1,6 @@
 const Database = require('better-sqlite3');
 const db = new Database('./mercadito.db');
 
-// Ejecutar las migraciones/inicializaciones
 db.exec(`
   CREATE TABLE IF NOT EXISTS productos (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -53,7 +52,6 @@ db.exec(`
   );
 `);
 
-// Verificar y actualizar estructura de ofertas si es necesario
 db.exec(`
   PRAGMA foreign_keys = ON;
   

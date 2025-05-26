@@ -35,7 +35,7 @@ export default function NuevoProducto() {
     if (isSuccess) {
       const timer = setTimeout(() => {
         navigate("/inventario", { replace: true });
-      }, 1500); // Espera 1.5 segundos antes de redirigir
+      }, 150);
       return () => clearTimeout(timer);
     }
   }, [isSuccess, navigate]);

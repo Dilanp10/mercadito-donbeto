@@ -1,4 +1,3 @@
-// src/pages/EditarProducto.jsx
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useInventario } from "../context/InventarioContext";
@@ -30,7 +29,6 @@ export default function EditarProducto() {
         precio: producto.precio || 0,
         stock: producto.stock || 0,
         categoria: producto.categoria || '',
-        // guardamos directamente la fecha completa si viene en ISO
         fechaVencimiento: producto.fecha_vencimiento || '',
         id: producto.id
       });
@@ -50,7 +48,6 @@ export default function EditarProducto() {
         categoria: formulario.categoria,
         precio: Number(formulario.precio),
         stock: Number(formulario.stock),
-        // Aquí usamos camelCase para que tu backend lo mapee correctamente
         fechaVencimiento: formulario.fechaVencimiento
       });
       navigate("/inventario");

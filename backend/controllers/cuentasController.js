@@ -1,4 +1,3 @@
-// controllers/cuentasController.js
 const cuentaModel = require('../models/cuentaModel');
 const compraModel = require('../models/compraModel');
 

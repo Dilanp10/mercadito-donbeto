@@ -1,7 +1,7 @@
 const db = require('../db/database');
 
 /**
- * Crea una nueva oferta y calcula automáticamente el precio_total
+ * 
  * @param {Object} oferta - Datos de la oferta
  * @param {number} oferta.producto_id - ID del producto
  * @param {number} oferta.cantidad_minima - Cantidad mínima
@@ -12,7 +12,7 @@ const crearOferta = async (oferta) => {
   try {
     const { producto_id, cantidad_minima, precio_unitario } = oferta;
 
-    // Validaciones mejoradas
+    
     if (!producto_id || !cantidad_minima || !precio_unitario) {
       throw new Error('Todos los campos son obligatorios');
     }
@@ -37,7 +37,6 @@ const crearOferta = async (oferta) => {
       Number(precio_unitario)
     );
 
-    // Obtener la oferta recién creada con JOIN al producto
     const nuevaOferta = db.prepare(`
       SELECT 
         o.*,
@@ -54,12 +53,11 @@ const crearOferta = async (oferta) => {
   } catch (error) {
     console.error('Error detallado en crearOferta:', {
       message: error.message,
-      code: error.code, // Código de error SQLite
+      code: error.code, 
       stack: error.stack,
       data: oferta
     });
 
-    // Manejo específico de errores de SQLite
     if (error.code === 'SQLITE_CONSTRAINT') {
       if (error.message.includes('FOREIGN KEY')) {
         throw new Error('El producto especificado no existe');

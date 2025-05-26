@@ -1,4 +1,3 @@
-// src/lib/axios.js
 import axios from 'axios';
 
 const api = axios.create({
@@ -8,4 +7,4 @@ const api = axios.create({
   },
 });
 
-export default api; // Asegúrate de que esta línea esté exactamente así
+export default api; 

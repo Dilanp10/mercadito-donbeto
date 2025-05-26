@@ -1,9 +1,8 @@
-// backend/routes/notas.js
 const express = require('express');
 const router = express.Router();
 const db = require('../db/database');
 
-// Crear tabla de notas (ejecutar una sola vez)
+
 db.prepare(`
   CREATE TABLE IF NOT EXISTS notas (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

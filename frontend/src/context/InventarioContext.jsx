@@ -1,4 +1,3 @@
-// frontend/context/InventarioContext.jsx
 import { createContext, useContext, useState, useEffect } from 'react';
 import api from '../lib/axios';
 import { toast } from 'react-hot-toast';

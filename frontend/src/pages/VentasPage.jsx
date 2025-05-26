@@ -24,7 +24,7 @@ export default function VentasPage() {
         }
       })
       .catch(() => {
-        // si hay error, las ofertas quedan vacías
+        
         setOfertas([]);
       });
   }, []);

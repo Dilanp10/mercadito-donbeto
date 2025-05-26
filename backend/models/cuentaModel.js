@@ -1,4 +1,3 @@
-// models/cuentaModel.js
 const db = require('../db/database');
 
 function crearCuenta(nombre) {

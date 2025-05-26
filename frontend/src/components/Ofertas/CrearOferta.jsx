@@ -6,7 +6,7 @@ export default function CrearOferta() {
   const [productos, setProductos] = useState([]);
   const [productoId, setProductoId] = useState("");
   const [cantidadMinima, setCantidadMinima] = useState("");
-  const [precioUnitario, setPrecioUnitario] = useState("");  // ← renombrado
+  const [precioUnitario, setPrecioUnitario] = useState(""); 
 
   useEffect(() => {
     api.get("/productos")
@@ -24,7 +24,7 @@ export default function CrearOferta() {
     const nuevaOferta = {
       producto_id: Number(productoId),
       cantidad_minima: Number(cantidadMinima),
-      precio_unitario: Number(precioUnitario)      // ← enviamos unitario
+      precio_unitario: Number(precioUnitario)      //  enviamos unitario
     };
 
     api.post("/ofertas", nuevaOferta)
@@ -79,7 +79,7 @@ export default function CrearOferta() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium">Precio por unidad</label> {/* ← label cambiado */}
+        <label className="block text-sm font-medium">Precio por unidad</label> 
         <input
           type="number"
           step="0.01"

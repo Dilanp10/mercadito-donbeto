@@ -1,4 +1,3 @@
-// models/compraModel.js
 const db = require('../db/database');
 
 function registrarCompra(cuentaId, producto, cantidad, precio, fecha) {

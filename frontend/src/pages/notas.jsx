@@ -38,7 +38,7 @@ export default function Notas() {
       await api.post('/notas', nuevaNota);
       setNuevaNota({ titulo: '', descripcion: '' });
       setMostrarFormulario(false);
-      obtenerNotas(); // Refrescar la lista
+      obtenerNotas(); 
     } catch (error) {
       console.error('Error al crear nota:', error);
     }
@@ -48,7 +48,7 @@ export default function Notas() {
   const eliminarNota = async (id) => {
     try {
       await api.delete(`/notas/${id}`);
-      obtenerNotas(); // Refrescar la listas
+      obtenerNotas(); 
     } catch (error) {
       console.error('Error al eliminar nota:', error);
     }

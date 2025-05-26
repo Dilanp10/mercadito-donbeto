@@ -1,4 +1,3 @@
-// backend/routes/productos.js
 const express = require('express');
 const router = express.Router();
 const db = require('../db/database');
@@ -52,7 +51,7 @@ router.patch('/:id', (req, res) => {
       return res.status(404).json({ error: 'Producto no encontrado' });
     }
 
-    // Mapeo de campos camelCase -> snake_case
+    // Mapeo de campos 
     const fieldMap = {
       nombre: 'nombre',
       categoria: 'categoria',

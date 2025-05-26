@@ -1,4 +1,3 @@
-// routes/ventasRoutes.js
 const express = require('express');
 const router = express.Router();
 const db = require('../db/database');
@@ -20,7 +19,7 @@ router.post('/', (req, res) => {
       });
     }
 
-    // 1. Carga de ofertas: mapeo producto_id → { cantidad_minima, precio_total }
+    // 1. Carga de ofertas: mapeo producto_id 
     const ofertasRows = db.prepare(`SELECT producto_id, cantidad_minima, precio_total FROM ofertas`).all();
     const ofertasMap = {};
     ofertasRows.forEach(o => {
@@ -125,7 +124,7 @@ router.get('/', (req, res) => {
       pago: Number(v.pago),
       vuelto: Number(v.vuelto),
       cliente: v.cliente,
-      metodoPago: v.metodo_pago,     // lo renombramos al devolver
+      metodoPago: v.metodo_pago,     
       productos: JSON.parse(v.items)
     }));
 

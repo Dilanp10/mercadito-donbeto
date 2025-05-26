@@ -211,9 +211,7 @@ export default function DetalleCuenta() {
         </button>
       </div>
 
-      {/* ----------------------- */}
       {/* Formulario y carrito */}
-      {/* ----------------------- */}
       <div className="bg-white rounded-lg shadow p-6 mb-6">
         <h2 className="text-lg font-semibold mb-4">Agregar nueva compra</h2>
         <input
@@ -289,9 +287,7 @@ export default function DetalleCuenta() {
         )}
       </div>
 
-      {/* ----------------------- */}
       {/* Historial de Compras */}
-      {/* ----------------------- */}
       <div className="bg-white rounded-lg shadow p-6">
         <h2 className="text-lg font-semibold mb-4">Historial de Compras</h2>
         {compras.length === 0 ? (

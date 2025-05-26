@@ -15,7 +15,7 @@ export default function CuentasPage() {
       const res = await axios.get('/cuentas');
       console.log('Respuesta de /cuentas:', res.data);
 
-      const datos = res.data.data; // <- Aquí accedemos al arreglo
+      const datos = res.data.data; //accedemos al arreglo
 
       if (Array.isArray(datos)) {
         setCuentas(datos);

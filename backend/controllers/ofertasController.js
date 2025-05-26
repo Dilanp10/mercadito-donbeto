@@ -1,7 +1,7 @@
 const ofertasModel = require("../models/ofertasModel");
 
 /**
- * Crea una nueva oferta con precio_unitario (calcula precio_total internamente)
+ * 
  * @param {Object} req - Request object
  * @param {Object} res - Response object
  */
